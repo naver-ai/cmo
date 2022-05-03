@@ -125,5 +125,10 @@ THE SOFTWARE.
 If you find our paper and repo useful, please cite our paper.
 
 ```
-
+@inproceedings{park2021cmo,
+  title={The Majority Can Help The Minority: Context-rich Minority Oversampling for Long-tailed Classification},
+  author={Park, Seulki and Hong, Youngkyu and Heo, Byeongho and Yun, Sangdoo and Choi, Jin Young},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  year={2022}
+}
 ```
