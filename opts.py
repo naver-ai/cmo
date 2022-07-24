@@ -53,7 +53,7 @@ parser.add_argument('--mixup_prob', default=0.5, type=float, help='mixup probabi
 parser.add_argument('--start_data_aug', default=3, type=int, help='start epoch for aug')
 parser.add_argument('--end_data_aug', default=3, type=int, help='how many epochs to turn off aug')
 parser.add_argument('--weighted_alpha', default=1, type=float, help='weighted alpha for sampling probability (q(1,k))')
-
+parser.add_argument('--beta', default=1, type=float, help='hyperparam for beta distribution')
 parser.add_argument('--use_randaug', action='store_true')
 
 # etc.
