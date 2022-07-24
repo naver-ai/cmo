@@ -39,7 +39,7 @@ class NormedLinear(nn.Module):
 def main():
     args = parser.parse_args()
     args.store_name = '_'.join(
-        [args.dataset, args.arch, args.loss_type, args.train_rule, args.data_aug, args.imb_type, str(args.imb_factor),
+        [args.dataset, args.arch, args.loss_type, args.train_rule, args.data_aug, str(args.imb_factor),
          str(args.rand_number),
          str(args.mixup_prob), args.exp_str])
     prepare_folders(args)
@@ -192,9 +192,8 @@ def main_worker(gpu, ngpus_per_node, args):
 
     weighted_train_loader = None
 
-    if 'inverse' in args.data_aug:
-        weight_alpha = 1  # 1 if balanced
-        cls_weight = 1.0 / (np.array(cls_num_list) ** weight_alpha)
+    if args.data_aug == 'CMO':
+        cls_weight = 1.0 / (np.array(cls_num_list) ** args.weighted_alpha)
         cls_weight = cls_weight / np.sum(cls_weight) * len(cls_num_list)
         samples_weight = np.array([cls_weight[t] for t in train_dataset.targets])
         samples_weight = torch.from_numpy(samples_weight)
