@@ -301,7 +301,7 @@ def hms_string(sec_elapsed):
     return "{}:{:>02}:{:>05.2f}".format(h, m, s)
 
 
-def train(train_loader, model, criterion, optimizer, epoch, args, log, tf_writer,
+def train(train_loader, model, criterion, optimizer, epoch, args, log, tf_writer=None,
           weighted_train_loader=None):
     batch_time = AverageMeter('Time', ':6.3f')
     data_time = AverageMeter('Data', ':6.3f')
