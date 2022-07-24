@@ -301,7 +301,7 @@ def train(train_loader, model, criterion, optimizer, epoch, args, log,
 
         if args.data_aug == 'CMO' and args.start_data_aug < epoch < (args.epochs - args.end_data_aug) and r < args.mixup_prob:
             # generate mixed sample
-            lam = np.random.beta(1, 1)
+            lam = np.random.beta(args.beta, args.beta)
             bbx1, bby1, bbx2, bby2 = rand_bbox(input.size(), lam)
             input[:, :, bbx1:bbx2, bby1:bby2] = input2[:, :, bbx1:bbx2, bby1:bby2]
             # adjust lambda to exactly match pixel ratio
