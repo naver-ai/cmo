@@ -52,7 +52,7 @@ python imagenet_train.py -a resnet50 --root data/ILSVRC/ --dataset Imagenet-LT -
 
 ```bash
 python imagenet_train.py -a resnet50 --root data/ILSVRC/ --dataset Imagenet-LT --loss_type BS \
---data_aug CMO --epochs 100 --num_classes 1000 --workers 12 --print_freq 100  --wd 5e-4 --lr 0.02 \
+--data_aug CMO --epochs 400 --num_classes 1000 --workers 12 --print_freq 100  --wd 5e-4 --lr 0.02 \
 --cos --use_randaug
 ```
 
@@ -71,7 +71,7 @@ python inat_train.py -a resnet50 --root data/iNat2018/ --dataset iNat18 --loss_t
 
 ```bash
 python inat_train.py -a resnet50 --root data/iNat2018/ --dataset iNat18 --loss_type BS --data_aug CMO \
---epochs 100 --num_classes 8142 --workers 12 --print_freq 100 --wd 1e-4 --lr 0.02 --cos --use_randaug
+--epochs 400 --num_classes 8142 --workers 12 --print_freq 100 --wd 1e-4 --lr 0.02 --cos --use_randaug
 ```
 
 ## Results and Pretrained models
