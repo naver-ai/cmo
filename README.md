@@ -5,7 +5,7 @@ by **Seulki Park<sup>1</sup>, Youngkyu Hong<sup>2</sup>, Byeongho Heo<sup>2</sup
 
 This is the official implementation of [Context-rich Minority Oversampling for Long-tailed Classification](https://arxiv.org/abs/2112.00412) in PyTorch.
 
-[Paper](https://arxiv.org/abs/2112.00412) | [Bibtex](#Citation)
+[Paper](https://arxiv.org/abs/2112.00412) | [Bibtex](#Citation)| [Video](https://youtu.be/ngvazICgOxo) | [Slides](https://www.slideshare.net/SeulkiPark10/cvpr-22-contextrich-minority-oversampling-for-longtailed-classification)
 
 ## Requirements
 
